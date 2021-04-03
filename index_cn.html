@@ -1,6 +1,8 @@
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<meta name="viewport" content="width=device-width，initial-scale=1，maximum-scale=5.0，minimum-scale=0.2">
+
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -15,241 +17,242 @@
     <script>var clicky_site_ids = clicky_site_ids || []; clicky_site_ids.push(101296995);</script>
     <script async src="//static.getclicky.com/js"></script>    
 
+    <script>
+        // 判断是否为移动端运行环境 
+
+        // if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){ 
+
+        // if(window.location.href.indexOf("?mobile")<0){ 
+        try{ 
+            // if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){ 
+            if (window.screen.width < 700) {
+            // 判断访问环境是 Android|webOS|iPhone|iPod|BlackBerry 则加载以下样式 
+                setActiveStyleSheet("jemdoc_mobile.css"); 
+            } 
+            else if(/iPad/i.test(navigator.userAgent)){ 
+            // 判断访问环境是 iPad 则加载以下样式 
+                setActiveStyleSheet("jemdoc.css"); 
+            } 
+            else{ 
+            // 判断访问环境是 其他移动设备 则加载以下样式 
+                setActiveStyleSheet("jemdoc.css"); 
+            } 
+        } 
+        catch(e){} 
+        // } 
+        // } 
+
+        // else{ 
+
+        // 如果以上都不是，则加载以下样式 
+
+        // setActiveStyleSheet("jemdoc.css"); 
+
+        // } 
+
+        // 判断完毕后加载样式 
+
+        function setActiveStyleSheet(filename){
+            document.write("<link href="+filename+" rel=stylesheet>");
+        }
+    </script>
+
     <link rel="shortcut icon" href="myIcon.ico">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-    <meta name="keywords" content="Tao Huang, SenseTime">
-    <meta name="description" content="Tao Huang's home page">
-    <link rel="stylesheet" href="jemdoc.css" type="text/css" />
-    <title>黄涛</title>
+    <meta name="keywords" content="Guanyu Cui">
+    <meta name="description" content="Guanyu Cui's homepage">
+    <!-- <link rel="stylesheet" href="jemdoc.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="jemdoc_mobile.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (max-width:700px)" href="jemdoc.css" type="text/css" /> -->
+    <title>崔冠宇</title>
 </head>
 
 <body>
-    <div id="layout-content" style="margin-top:25px">
+    <div id="layout-content" style="margin-top:0px">
         <table>
             <tbody>
                 <tr>
-                    <td width="700">
+                    <td width="80%">
                         <div id="toptitle">
-                        <!--<h1>Tao Huang &nbsp; <img src="assets/name_chs.png" height="40px" style="margin-bottom:-10px"></h1>-->
-                        <h1>黄 涛</h1>
-				</div>
-				<h3>研究员</h3>
-				<p>
-                    商汤科技</br>
-					Email: <a href="mailto:hunto@foxmail.com">hunto [at] foxmail.com</a>
-					or <a href="mailto:huangtao@senseauto.com">huangtao [at] senseauto.com</a>
-				</p>
-				<p>
-					<a href="https://github.com/hunto"><img src="assets/github.png" height="30px"></a>
-					<a href="https://scholar.google.com/citations?user=jkcRdBgAAAAJ&hl=en"><img src="assets/google_scholar.png" height="30px"></a>
-				</p>
-                <b>把握可控的，留心可见的，余下顺其自然。</b>
-			</td>
-			<td><img src="assets/taohuang.jpg" border="0" height="200"></br></td>
+                        <h1>崔冠宇 [<a href="index.html">English</a>]</h1>
+				        </div>
+                        <h3>本科生 (信息学院，RUC)</h3>
+                        <p>
+                            <!-- SenseTime Group Ltd</br> -->
+                            电子邮箱: <a href="mailto:cuiguanyu@ruc.edu.cn">cuiguanyu [Shift + 2] ruc.edu.cn</a>
+                            或 <a href="mailto:cuiguanyu2000@126.com">cuiguanyu2000 [Shift + 2] 126.com</a>
+                        </p>
+                        <p>
+                            我的 GitHub 主页: <a href="https://github.com/GuanyuCui"><img src="assets/github.png" height="30px"></a>
+                            <!-- <a href="https://scholar.google.com/citations?user=jkcRdBgAAAAJ&hl=en"><img src="assets/google_scholar.png" height="30px"></a> -->
+                        </p>
+                        <b>A man provided with paper, pencil, and rubber, and subject to strict discipline, is in effect a universal machine. — Alan M. Turing</b>
+                    </td>
+			        <td width="20%"><img src="assets/guanyucui.jpg" border="0" width="80%"></br></td>
 		<tr>
 	</tbody>
 </table>
 
-<h2>个人简历 [<a href="assets/CV_taohuang.pdf">CV</a>]</h2>
+<h2>自我介绍 [简历: <a href="assets/CV_CN.pdf">中文版</a>]</h2>
 <!-- <h2>Biography</h2> -->
 <p>
     <div style="text-align:justify"> 
-        我叫黄涛（Tao Huang）。当前我是<a href="https://sensetime.com">商汤科技</a>的一名研究员，与<a href="https://shanyou92.github.io/">游山</a>和<a href="http://wangfei.info/">王飞</a>一块工作。在此之前，我于2020年6月本科毕业于<a href="https://www.hust.edu.cn">华中科技大学</a>。
+        我是崔冠宇 (or Guanyu Cui in English)。我现在是<a href="https://www.ruc.edu.cn">中国人民大学</a><a href="https://info.ruc.edu.cn">信息学院</a>的一名本科生。
     </div>
 </p>
-<p>我的研究方向主要包括自动机器学习及其它计算机视觉任务，如人脸识别和目标检测。</p>
+<p>我的研究兴趣包括计算复杂性、量子计算机与量子算法。</p>
 <!-- <p><font color="red">Pinned: </font></p> -->
-<h2>News</h2>
+<!-- <h2>News</h2>
 <ul>
     <li>
-        [2021/01] 一篇关于通道数搜索（剪枝）的论文被ICLR2021接收为spotlight。
+        [2021/03] One paper about NAS was accepted to CVPR2021. The NAS benchmark in our paper was released on <a href="https://github.com/xiusu/NAS-Bench-Macro">github</a>.
     </li>
     <li>
-        [2020/11] 一篇关于NAS的论文已公开至<a href="https://arxiv.org/abs/2011.09300">arXiv</a>。我们的TopoNAS直接学习了可微NAS（DARTS）的拓扑结构，搜索到的模型取得了显著的效率提升。
+        [2021/01] One paper about channel number search (pruning) was accepted to ICLR2021 as spotlight.
     </li>
-    <li>
-        [2020/10] 一篇关于量子结构搜索（QAS）的论文已公开至<a href="https://arxiv.org/abs/2010.10217">arXiv</a>。我们的QAS隐式地学习了一种可以很好降低量子噪声和梯度消失影响的规则。
-    </li>
-    <li>
-        [2020/02] 一篇关于NAS的文章被录用至CVPR2020。
-    </li>
-</ul>
+</ul> -->
 
 <h2>教育经历</h2>
 <ul>
     <li>
-        <div style="float:left; text-align:left"><a href="https://www.hust.edu.cn">华中科技大学</a>，中国武汉</div> <div style="float:right; text-align:right">2016年9月 – 2020年6月</div><br>
-        <div style="float:left; text-align:left">计算机科学与技术 学士学位<br></div>
+        <div style="display: flex; justify-content: space-between;">
+            <div><a href="https://www.ruc.edu.cn">中国人民大学</a>，中华人民共和国，北京</div>
+            <div style="margin-left: 2px;">2018 年 9 月 – 2022 年 6 月</div>
+        </div>
+        计算机科学与技术 学士<br>
     </li>
 </ul>
 <!-- <h2>Publications [<a href="https://scholar.google.com/citations?user=jkcRdBgAAAAJ&hl=en">Google Scholar</a>]</h2> -->
-<h2>Publications</h2>
+<!-- <h2>Publications</h2>
 *: equal contribution.
 <ul>
     <li>
-        <a>Locally Free Weight Sharing for Network Width Search</a><br>
-        Xiu Su, Shan You, <b>Tao Huang</b>, Fei Wang, Chen Qian, Changshui Zhang, Chang Xu.<br>
-        To appear in <em>International Conference on Learning Representations</em> (<b>ICLR, Spotlight</b>), 2021.<br>
+        <a href="https://arxiv.org/abs/2103.11922">Prioritized Architecture Sampling with Monto-Carlo Tree Search</a><br>
+        Xiu Su*，<b>Tao Huang</b>*，Yanxi Li，Shan You，Fei Wang，Chen Qian，Changshui Zhang，Chang Xu.<br>
+        To appear in <em>IEEE Conference on Computer Vision and Pattern Recognition</em> (<b>CVPR</b>)，2021.<br>
         <p style="margin-top:3px">
-			[<a href="https://arxiv.org/pdf/2102.05258.pdf">Paper</a>]
+			[<a href="https://arxiv.org/pdf/2103.11922.pdf">Paper</a>]
+            [<a href="https://scholar.google.com/scholar?oi=bibs&hl=en&cluster=16897259555170724856">Bib</a>]
 		</p>
     </li>
-	<li>
-		<a href="https://arxiv.org/abs/2003.11236">GreedyNAS: Towards Fast One-Shot NAS with Greedy Supernet</a><br>
-		Shan You*, <b>Tao Huang</b>*, Mingmin Yang*, Fei Wang, Chen Qian, and Changshui Zhang.<br>
-		<em>IEEE Conference on Computer Vision and Pattern Recognition</em> (<b>CVPR</b>), 2020.</br>
-		<p style="margin-top:3px">
-			[<a href="https://arxiv.org/pdf/2003.11236.pdf">Paper</a>]
-            [<a href="https://scholar.google.com/scholar?cluster=11467412928038806592&hl=en&as_sdt=0,5">Bib</a>]
-            [<a href="assets/greedynas/Poster_CVPR2020_GreedyNAS.pdf">Poster</a>]
-            [<a href="assets/greedynas/Video_CVPR2020_GreedyNAS.mp4">Video</a>]
-            [<a href="assets/greedynas/Slides_GreedyNAS_titan.pdf">Slides</a>]
-		</p>
-	</li>
-</ul>
+</ul> -->
 
-<!-- <h2>Manuscripts [<a href="https://scholar.google.com/citations?user=jkcRdBgAAAAJ&hl=en">Google Scholar</a>]</h2> -->
-<h2>Manuscripts</h2>
-*: equal contribution.
+<h2>教学经验</h2>
 <ul>
     <li>
-		<a href="https://arxiv.org/abs/2011.09300">Explicitly Learning Topology for Differentiable Neural Architecture Search</a><br>
-		<b>Tao Huang</b>, Shan You, Yibo Yang, Zhuozhuo Tu, Fei Wang, Chen Qian, and Changshui Zhang.<br>
-		<em>arXiv preprint arXiv:2011.09300 (2020).</em>
-		<p style="margin-top:3px">
-			[<a href="https://arxiv.org/pdf/2011.09300">Paper</a>]
-			[<a href="https://scholar.google.com/scholar?cluster=239245335818813796&hl=en&as_sdt=0,5">Bib</a>]
-		</p>
-    </li>
-    <li>
-		<a href="https://arxiv.org/abs/2010.15041">Data Agnostic Filter Gating for Efficient Deep Networks</a><br>
-		Xiu Su, Shan You, <b>Tao Huang</b>, Hongyan Xu, Fei Wang, Chen Qian, Changshui Zhang, and Chang Xu.<br>
-		<em>arXiv preprint arXiv:2010.15041 (2020).</em>
-		<p style="margin-top:3px">
-			[<a href="https://arxiv.org/pdf/2010.15041">Paper</a>]
-			[<a href="https://scholar.google.com/scholar?cluster=6802250960153223046&hl=en&as_sdt=0,5">Bib</a>]
-		</p>
-	</li>
-	<li>
-		<a href="https://arxiv.org/abs/2010.10217">Quantum circuit architecture search: error mitigation and trainability enhancement for variational quantum solvers</a><br>
-		Yuxuan Du, <b>Tao Huang</b>, Shan You, Min-Hsiu Hsieh, and Dacheng Tao.<br>
-		<em>arXiv preprint arXiv:2010.10217 (2020).</em>
-		<p style="margin-top:3px">
-			[<a href="https://arxiv.org/pdf/2010.10217">Paper</a>]
-			[<a href="https://scholar.google.com/scholar?cluster=14041544508923660633&hl=en&as_sdt=0,5">Bib</a>]
-		</p>
+        <div style="display: flex; justify-content: space-between;">
+            <div>助教，中国人民大学，程序设计II</div>
+            <div style="margin-left: 2px;">2021 年 3 月 – 2021 年 6 月</div>
+        </div>
     </li>
 </ul>
 
-<h2>经历</h2>
+<h2>个人与小组研究项目</h2>
 <ul>
 	<li>
-        <a href="https://sensetime.com">商汤科技</a>，中国北京<br>
-        <div style="float:left; text-align:left">
-            研究员</div> <div style="float:right; text-align:right">2020年7月 – 至今
-            </div><br>
-        <div style="float:left; text-align:left">
-            见习研究员</div> <div style="float:right; text-align:right">2019年8月 – 2020年7月
-            </div><br>
+        <a href="http://jiaowu.ruc.edu.cn/dxscxsyjhw/index.htm">大学生创新实验计划</a>，国家级立项
+        <div style="display: flex; justify-content: space-between; font-style: italic;">
+            <div>组员</div>
+            <div style="margin-left: 2px;">2020 年 7 月 – 至今</div>
+        </div>
         <ul>
-            <li>
-                研究神经结构搜索（NAS）与模型剪枝。
+            <li>项目名称为“北京协和医院发展历程和社会舆情研究——新冠疫情背景下的一个多学科融合的审视”。
             </li>
             <li>
-                将NAS应用至人脸识别任务上，显著提升了模型在大规模工业数据集上的精度。
+                为历史学院同学提供数据分析等支持。
             </li>
         </ul>
 	</li>
-	<li>
-		<div style="float:left; text-align:left"><a href="https://horizon.ai">地平线机器人</a>，中国北京</div> <div style="float:right; text-align:right">2019年5月 – 2019年8月</div><br>
-        计算机视觉算法实习生<br>
-        
+    <li>
+        <a href="https://github.com/GuanyuCui/Social-Network-Analysis">政府数据中的社会网络分析</a>，课程项目
+        <div style="display: flex; justify-content: space-between; font-style: italic;">
+            <div>个人研究</div>
+            <div style="margin-left: 2px;">2020 年 12 月 – 2021 年 1 月</div>
+        </div>
         <ul>
+            <li><i>网络、群体与市场</i>的课程作业。</li>
             <li>
-                目标检测框架开发：anchor-free的检测算法、交通场景下的检测。
-            </li>
-            <li>
-                目标检测、人脸关键点知识蒸馏方法研究。
+                我从老师提供的新闻中提取了各类实体，在他们之间建立了社会网络，并用课程所学内容进行了分析，
+                同时还撰写了一篇<a href="https://github.com/GuanyuCui/Social-Network-Analysis/blob/main/report.pdf">研究报告</a>。
             </li>
         </ul>
 	</li>
-	<li>
-        <a href="http://dian.org.cn/">点团队</a>，中国武汉<br>
-        <div style="float:left; text-align:left">实时人脸检测与关键点项目组长，AI组</div> <div style="float:right; text-align:right">2018年12月 – 2019年5月</div><br>
+    <li>
+        <a href="https://github.com/GuanyuCui/SAIS-BWT-FMIndex">SAIS-BWT-FMIndex 在子串查询中的应用</a>，课程项目
+        <div style="display: flex; justify-content: space-between; font-style: italic;">
+            <div>个人研究</div>
+            <div style="margin-left: 2px;">Nov. 2020 – Dec. 2020</div>
+        </div>
         <ul>
+            <li><i>数据结构与算法II</i>的课程作业。</li>
             <li>
-                开发安卓APP以在移动设备上运行人脸识别、跟踪、106点关键点检测模型。
-            </li>
-            <li>
-                模型加速（如知识蒸馏、模型剪枝）和人脸关键点（如多任务学习、损失函数、数据增强）研究。
-            </li>
-            <li>
-                我们提出的模型在华为Mate20 Pro上达到了5ms每张图的运行速度。
+                我阅读了一些有关后缀排序、BW 变换以及 FM 索引的文献，实现了一个基于 SAIS-BWT-FMIndex 的程序，可以提供超长字符串的子串搜索功能，
+                同时还撰写了一篇简短的<a href="https://github.com/GuanyuCui/SAIS-BWT-FMIndex/blob/main/report.pdf">报告</a>。
             </li>
         </ul>
-        <div style="float:left; text-align:left">贝贝智能客服项目核心成员，AI组</div> <div style="float:right; text-align:right">2018年2月 – 2018年12月</div><br>
-        <ul>
-            <li>
-                本项目来自于<a href="https://www.beibei.com/">贝贝集团</a>，贝贝是中国最大的母婴电商平台。项目的目的是基于用户的提问找到最优的问题分类。
-            </li>
-            <li>
-                文本分类与数据增强的研究与开发。
-            </li>
-        </ul>
-	</li>
-	<li>
-		<div style="float:left; text-align:left">3D打印团队，中国武汉</div> <div style="float:right; text-align:right">2017年1月 – 2019年1月</div><br>
-		嵌入式组组长<br>
-        方向：开发3DP/FDM 3D打印机的控制算法。<br>
 	</li>
 </ul>
 
-<!-- <h2>Professional Activities</h2> -->
-<!-- <ul> -->
-	<!---<li>Conference Reviewer: .</li>--->
-<!-- </ul> -->
-
-<h2>荣誉与奖励</h2>
+<h2>竞赛</h2>
 <ul>
-	<li>
-		<div style="float:left; text-align:left">华中科技大学优秀毕业论文</div> <div style="float:right; text-align:right">2020年6月</div>
+    <li>
+        <div style="display: flex; justify-content: space-between;">
+            <div>挑战杯铜奖，国家级</div>
+            <div style="margin-left: 2px;">2020 年 10 月</div>
+        </div>
     </li>
     <li>
-		<div style="float:left; text-align:left">华中科技大学优秀毕业生</div> <div style="float:right; text-align:right">2020年6月</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>高教社杯全国大学生数学建模竞赛，北京赛区甲组北京二等奖</div>
+            <div style="margin-left: 2px;">2020 年 9 月</div>
+        </div>
+    </li>
+</ul>
+
+<h2>个人荣誉与获奖</h2>
+<ul>
+    <!-- <li>
+        <div style="display: flex; justify-content: space-between;">
+            <div>Outstanding Graduate award，Huazhong University of Science and Technology</div>
+            <div style="margin-left: 2px;">Jun. 2020</div>
+        </div>
     </li>
     <li>
-		<div style="float:left; text-align:left">全国大学生智能互联创新大赛 华南赛区一等奖</div> <div style="float:right; text-align:right">2018</div>
-	</li>
+        <div style="display: flex; justify-content: space-between;">
+            <div>Outstanding Graduate Thesis award，Huazhong University of Science and Technology</div>
+            <div style="margin-left: 2px;">Jun. 2020</div>
+        </div>
+    </li> -->
     <li>
-		<div style="float:left; text-align:left">湖北省 “挑战杯”竞赛 三等奖</div> <div style="float:right; text-align:right">2018</div>
-	</li>
-	<li>
-		<div style="float:left; text-align:left">华中科技大学“挑战杯”竞赛 一等奖</div> <div style="float:right; text-align:right">2018</div>
-	</li>
-    <li>
-        <div style="float:left; text-align:left">“有方杯”物联网电子设计大赛 二等奖</div> <div style="float:right; text-align:right">2018</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>本科生国家奖学金</div>
+            <div style="margin-left: 2px;">2020 年 12 月</div>
+        </div>
     </li>
     <li>
-        <div style="float:left; text-align:left">“种子杯”机器学习竞赛 三等奖</div> <div style="float:right; text-align:right">2017</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>中国人民大学校级三好学生</div>
+            <div style="margin-left: 2px;">2020 年 11 月</div>
+        </div>
     </li>
     <li>
-        <div style="float:left; text-align:left">华中科技大学科技创新奖学金</div> <div style="float:right; text-align:right">2017</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>本科生国家奖学金</div>
+            <div style="margin-left: 2px;">2019 年 12 月</div>
+        </div>
     </li>
     <li>
-        <div style="float:left; text-align:left">“有方杯”物联网电子设计大赛 三等奖</div> <div style="float:right; text-align:right">2017</div>
+        <div style="display: flex; justify-content: space-between;">
+            <div>服务保障中华人民共和国成立 70 周年庆祝活动校级先进个人</div>
+            <div style="margin-left: 2px;">2019 年 10 月</div>
+        </div>
     </li>
 </ul>
 
 <div id="footer">
-	<div id="footer-text"></div>
+	<div id="footer-text" style="text-align: center;">© 崔冠宇 | 最近更新: 2021 年 4 月 4 日</div>
 </div>
-	<center>© 黄涛 | 最近修改于 02/19/2021</center>
-    <!--<center>© Tao Huang
-    	<script type="text/javascript" language="javascript">
-    	if (Date.parse(document.lastModified) != 0) document.write(" | Last updated: " + document.lastModified);</script>
-    </center>-->
 </div>
 
 </body>
 </html>
-
