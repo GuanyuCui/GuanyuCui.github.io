@@ -843,3 +843,119 @@ p {
 		display: block;
 	}
 }
+.photo-link {
+	display: inline-block;
+	max-width: 100%;
+	color: inherit;
+	cursor: zoom-in;
+}
+
+.photo-link:hover,
+.photo-link:focus-visible {
+	text-decoration: none;
+}
+
+.photo-link:focus-visible {
+	outline: 3px solid rgba(48, 40, 31, 0.32);
+	outline-offset: 6px;
+	border-radius: 10px;
+}
+
+.photo-link img {
+	background: rgba(68, 57, 43, 0.08);
+}
+
+.photo-loading {
+	display: grid;
+	place-items: center;
+	width: min(100%, 1200px);
+	min-height: clamp(260px, 45vw, 620px);
+	padding: 28px;
+	border: 1px dashed rgba(68, 57, 43, 0.24);
+	background:
+		linear-gradient(135deg, rgba(80, 66, 47, 0.08), rgba(180, 151, 106, 0.08)),
+		linear-gradient(180deg, rgba(247, 241, 232, 0.72), rgba(232, 222, 208, 0.62));
+	color: #594938;
+	font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+	font-size: 0.78rem;
+	font-weight: 800;
+	letter-spacing: 0.12em;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.photo-dialog-open {
+	overflow: hidden;
+}
+
+.photo-dialog {
+	position: fixed;
+	inset: 0;
+	width: 100vw;
+	max-width: none;
+	height: 100vh;
+	height: 100dvh;
+	max-height: none;
+	margin: 0;
+	padding: clamp(14px, 3vw, 34px);
+	border: 0;
+	background: rgba(20, 16, 12, 0.94);
+	overflow: hidden;
+}
+
+.photo-dialog[open] {
+	display: grid;
+	place-items: center;
+}
+
+.photo-dialog::backdrop {
+	background: rgba(20, 16, 12, 0.94);
+	backdrop-filter: blur(10px);
+}
+
+.photo-dialog img {
+	display: block;
+	width: auto;
+	height: auto;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
+	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
+}
+
+.photo-dialog-close {
+	position: fixed;
+	top: max(16px, env(safe-area-inset-top));
+	right: max(18px, env(safe-area-inset-right));
+	z-index: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	border: 0;
+	border-radius: 999px;
+	background: rgba(252, 249, 242, 0.92);
+	color: #211b15;
+	font-size: 1.55rem;
+	font-weight: 700;
+	line-height: 1;
+	box-shadow: 0 14px 32px rgba(20, 16, 12, 0.24);
+	cursor: pointer;
+}
+
+.photo-dialog-close:hover,
+.photo-dialog-close:focus-visible {
+	background: #ffffff;
+}
+
+@media (max-width: 640px) {
+	.photo-dialog {
+		padding: 10px;
+	}
+
+	.photo-dialog-close {
+		top: max(10px, env(safe-area-inset-top));
+		right: max(10px, env(safe-area-inset-right));
+	}
+}
