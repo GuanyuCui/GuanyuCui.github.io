@@ -565,6 +565,8 @@ p {
 }
 
 .gallery-nav {
+	position: static;
+	top: auto;
 	border-color: rgba(68, 57, 43, 0.13);
 	background: rgba(252, 249, 242, 0.76);
 	box-shadow: 0 18px 40px rgba(58, 47, 35, 0.08);
