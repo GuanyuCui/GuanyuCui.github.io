@@ -889,6 +889,8 @@ p {
 }
 
 .photo-dialog {
+	--dialog-pad: clamp(14px, 3vw, 34px);
+
 	position: fixed;
 	inset: 0;
 	width: 100vw;
@@ -897,7 +899,7 @@ p {
 	height: 100dvh;
 	max-height: none;
 	margin: 0;
-	padding: clamp(14px, 3vw, 34px);
+	padding: var(--dialog-pad);
 	border: 0;
 	background: rgba(20, 16, 12, 0.94);
 	overflow: hidden;
@@ -917,8 +919,8 @@ p {
 	display: block;
 	width: auto;
 	height: auto;
-	max-width: 100%;
-	max-height: 100%;
+	max-width: calc(100vw - var(--dialog-pad) - var(--dialog-pad));
+	max-height: calc(100dvh - var(--dialog-pad) - var(--dialog-pad));
 	object-fit: contain;
 	box-shadow: 0 24px 70px rgba(0, 0, 0, 0.36);
 }
@@ -951,7 +953,8 @@ p {
 
 @media (max-width: 640px) {
 	.photo-dialog {
-		padding: 10px;
+		--dialog-pad: 10px;
+		padding: var(--dialog-pad);
 	}
 
 	.photo-dialog-close {
